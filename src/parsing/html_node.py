@@ -241,7 +241,8 @@ class Br(TagWithoutParam):
 
 class Hr(TagWithoutParam):
     def __init__(self, *_args, **_kwargs):
-        super().__init__('\n----------------------\n')
+        # super().__init__('\n----------------------\n')
+        super().__init__('\n')
 
     def get_html(self, plain: bool = False):
         return '' if plain else super().get_html()
